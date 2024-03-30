@@ -39,7 +39,6 @@ def extract_trips_from_xlsx(filepath):
 
     return trips_df
 
-
 def convert_trip_chains_to_trips(trip_chains_df):
     """
     Extracts trip data from a dataframe extracted from a single xlsx sheet in the trip_chain_reports folder of this repository
@@ -79,10 +78,7 @@ def convert_trip_chains_to_trips(trip_chains_df):
             trip_start_time = trip_chain_start_time + pd.DateOffset(minutes=float(trip['time']))
 
     return trips
-
-
     
-
 def parse_chain_vector(row):
     """
     Given a row in the trips_chain_df, returns a list of dicts, 
